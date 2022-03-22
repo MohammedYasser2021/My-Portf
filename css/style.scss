@@ -342,8 +342,11 @@ header{
                 content: "\f054";
                 @extend %icon-before;
                 @media (max-width: 575px){
-                    margin-top: 2px;
+                    margin-top: 3px;
                 }
+            }
+            span{
+                color: $titleColor;
             }
         }
     }
@@ -353,7 +356,7 @@ header{
                 content: "\f058";
                 @extend %icon-before;
                 @media (max-width: 575px){
-                    margin-top: 2px;
+                    margin-top: 3px;
                 }
             }
         }
@@ -381,7 +384,7 @@ header{
                         content: "\f14a";
                         @extend %icon-before;
                         @media (max-width: 575px){
-                            margin-top: 2px;
+                            margin-top: 3px;
                         }
                     }
                 }
