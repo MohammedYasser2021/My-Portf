@@ -362,8 +362,18 @@ header .change-theme {
 .personal .info li::before {
   content: "";
 }
+@media (max-width: 575px) {
+  .personal .info li::before {
+    margin-top: 4px;
+  }
+}
 .personal .personal-skills li::before {
   content: "";
+}
+@media (max-width: 575px) {
+  .personal .personal-skills li::before {
+    margin-top: 4px;
+  }
 }
 
 /* End Personal */
@@ -382,6 +392,11 @@ header .change-theme {
 }
 .services .services-content .experience-items ul li::before {
   content: "";
+}
+@media (max-width: 575px) {
+  .services .services-content .experience-items ul li::before {
+    margin-top: 5px;
+  }
 }
 .services .services-content .box {
   text-align: center;

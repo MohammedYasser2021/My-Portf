@@ -341,6 +341,9 @@ header{
             &::before{
                 content: "\f054";
                 @extend %icon-before;
+                @media (max-width: 575px){
+                    margin-top: 4px;
+                }
             }
         }
     }
@@ -349,6 +352,9 @@ header{
             &::before{
                 content: "\f058";
                 @extend %icon-before;
+                @media (max-width: 575px){
+                    margin-top: 4px;
+                }
             }
         }
     }
@@ -374,6 +380,9 @@ header{
                     &::before{
                         content: "\f14a";
                         @extend %icon-before;
+                        @media (max-width: 575px){
+                            margin-top: 5px;
+                        }
                     }
                 }
             }
