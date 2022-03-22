@@ -364,7 +364,7 @@ header .change-theme {
 }
 @media (max-width: 575px) {
   .personal .info li::before {
-    margin-top: 4px;
+    margin-top: 2px;
   }
 }
 .personal .personal-skills li::before {
@@ -372,7 +372,7 @@ header .change-theme {
 }
 @media (max-width: 575px) {
   .personal .personal-skills li::before {
-    margin-top: 4px;
+    margin-top: 2px;
   }
 }
 
@@ -395,7 +395,7 @@ header .change-theme {
 }
 @media (max-width: 575px) {
   .services .services-content .experience-items ul li::before {
-    margin-top: 5px;
+    margin-top: 2px;
   }
 }
 .services .services-content .box {
