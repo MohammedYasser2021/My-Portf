@@ -1,0 +1,19 @@
+/* media queries variables */
+$Xs: "(max-width: 575px)";
+$Sm: "(min-width: 576px) and (max-width: 767px)";
+$md: "(min-width: 768px) and (max-width: 991px)";
+$lg: "(min-width: 992px) and (max-width: 1200px)";
+$xl: "(min-width: 1200px)";
+
+$mainColor: hsl(250, 66%, 75%);
+$altColor: hsl(250, 66%, 71%);
+$titleColor: hsl(219, 15%, 95%);
+$textColor: hsl(219, 8%, 75%);
+$textColorLight: hsl(219, 4%, 55%);
+$bodyColor: hsl(219, 48%, 8%);
+$containerColor: hsl(219, 32%, 12%);
+$linearGradient: linear-gradient(180deg, hsla(250, 66%, 71%, 1), hsla(250, 66%, 71%, 0.2));
+
+$body-font: 'Poppins', sans-serif;
+
+

@@ -1,0 +1,28 @@
+%center-xy{
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+%center-x{
+    transform: translateX(-50%);
+    left: 50%;
+}
+%center-y{
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+%container-box{
+    background-color: $containerColor;
+    padding: 20px;
+    border-radius: 20px;
+}
+%icon-before{
+    position: absolute;
+    color: $mainColor;
+    left: -22px;
+    top: 8px;
+    display: inline-block;
+    font: var(--fa-font-solid);
+    transition: 0.4s ease-in-out;
+}

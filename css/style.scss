@@ -1,0 +1,718 @@
+@import 'helpers/variables';
+@import 'helpers/placeholders';
+@import 'helpers/mixins';
+
+/* Global Styles */
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box !important;
+}
+body, button, textarea, input{
+    font-family: $body-font;
+    
+}
+body{
+    background-color: $bodyColor;
+    margin: 0 !important;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+input{
+    border: none;
+}
+.sec-padding{
+    padding: 4.5rem 0 1rem
+}
+.main{
+    overflow: hidden;
+}
+.section-subtitle{
+    color: $textColorLight;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.section-title{
+    color: $mainColor;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100px;
+        height: 2px;
+        background-color: $mainColor;
+        position: absolute;
+        bottom: -20px;
+        @extend %center-x;
+        @include prefixer (transition, 0.4s, webkit moz o ms);
+    }
+    &:hover::after{
+        transform: rotate(180deg) translateX(50%);
+    }
+}
+.scroll-header{
+    box-shadow: 0 4px 4px hsla(0, 0%, 4%, 0.3);
+}
+/* Start Navbar */
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $bodyColor;
+    z-index: 99;
+    nav{
+        height: 3.5rem;
+        .nav-logo{
+          img{
+              width: 200px;
+          }
+        }
+        .navbar-menu{
+            bottom: 1rem;
+            background-color: hsla(219, 32%, 16%, 0.8);
+            width: 75%;
+            transition: 0.4s ease-in-out;
+            @extend %center-x;
+            border-radius: 4rem;
+            padding: 1rem 2.25rem !important;
+            @include prefixer (backdrop-filter, blur(10px), webkit moz o ms);
+            @media (max-width: 767px) {
+                &{
+                    width: 90%;
+                }
+            }
+            .navbar-list{   
+            @media #{$Xs} {
+                &{
+                    justify-content: center !important;
+                    gap: 22px;
+                }
+            }      
+            .navbar-link{
+                padding: 0.7rem;
+                border-radius: 5rem;
+                &.active-link{
+                    background: $linearGradient;
+                    box-shadow: 0 0 16px hsla(250, 66%, 71%, 0.4);
+                }
+            }
+            }
+        }
+    }
+    .change-theme{
+        cursor: pointer;
+    }
+}
+/* End Navbar */
+/* Start Home */
+.home{
+    .home-greeting{
+        display: block;
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 0.25rem;
+        color: $titleColor;
+    }
+    .home-title{
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-style: italic;
+    }
+    .home-image{
+        text-align: center;
+        img{
+            background: $linearGradient;
+            border-radius: 20px;
+            @media (max-width: 575px) {
+                &{
+                    width: 95%
+                }
+            }
+        }
+    }
+ 
+    .home-social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+        margin: 30px 0;
+        &::after{
+            content: "";
+            width: 100px;
+            height: 2px;
+            background-color: $mainColor;
+            position: absolute;
+            bottom: -20px;
+            @include prefixer (transition, 0.4s, webkit moz o ms);
+        }
+        &:hover::after{
+            transform: rotate(180deg);
+        }
+        .home-social-link{
+            background-color: $containerColor;
+            color: $mainColor;
+            font-size: 25px;
+            padding: 0.25rem;
+            margin: 0;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include prefixer (transition, 0.4s, webkit moz o ms);
+            &:hover{
+                background-color: $mainColor;
+                color: #fff;
+            }
+        }
+    }
+    .home-scroll{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 50px;
+        color: $mainColor;
+        i{
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .home-scroll-name{
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+    .home-btns{
+        a.btn-danger{
+            background-color: $altColor !important;
+            border-color: $altColor !important
+        }
+        a.btn-primary{
+            background-color: transparent !important;
+            border-color: $mainColor !important
+        }
+    }
+}
+/* Start About */
+.about{
+  .about-image{
+    background: $linearGradient;
+    border-radius: 20px;
+    text-align: center;
+    img{
+        height: 320px;
+    }
+  }
+  .about-boxes{
+      @media (max-width: 575px) {
+          &{
+             padding: 0 20px;
+          }
+      }
+      .box{
+        @extend %container-box;
+          i{
+              font-size: 30px;
+              color: $altColor;
+          }
+          .about-box-title{
+            color: $titleColor;
+          }
+          .about-box-desc{
+              color: $textColorLight;
+              margin: 0;
+              font-size: 14px;
+          }
+      }
+  }
+  .about-desc{
+      color: $textColorLight;
+  }
+  .about-contact{
+    background-color: transparent !important;
+    border-color: $mainColor !important;
+    border-width: 2px;
+    color: #fff;
+    &.hvr-rectangle-in:before{
+        background-color: $mainColor;
+    }
+    &.btn{
+        box-shadow: none !important;
+    }
+    @media (max-width: 1199px){
+        width: 150px;
+        display: block;
+        margin: auto;
+    }
+    @media (max-width: 575px){
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+  }
+}
+/* End About */
+/* Start Skills */
+.skills{
+    .skills-content{
+        .box{
+             @extend %container-box;
+             .skills-title{
+                 color: $mainColor;
+             }
+             .skill-items{
+                 div{
+                     display: flex;
+                     gap: 15px;
+                     align-items: center !important;
+                     img{
+                         width: 35px;
+                         height: 35px;
+                         border-radius: 50%;
+                         background: $linearGradient;
+                         padding: 5px;
+                         filter: contrast(200%);
+                     }
+                     .skill-item-title{
+                         color: $titleColor;
+                         font-size: 13px;
+                         margin: 0 !important;
+                     }
+                 }
+             }
+        }
+    }
+}
+/* End Skills */
+/* Start Personal */
+.personal{
+    .personal-content{
+        .box{
+            @extend %container-box;
+            .personal-title{
+                color: $mainColor;
+            }
+            ul{
+                &.personal-skills{
+                    line-height: 2.245 !important;
+                }
+                li{
+                    color: $textColorLight;
+                    font-size: 14px;
+                    position: relative;
+                    transition: 0.4s ease-in-out;
+                    span{
+                        color: $titleColor;
+                        margin-right: 5px;
+                        font-size: 16px;
+                    }
+                    &:hover{
+                        padding-left: 20px;
+                    }
+                    &:hover::before{
+                        left: -2px
+                    }
+                }
+            }
+         
+        }
+    }
+    .info{
+        li{
+            &::before{
+                content: "\f054";
+                @extend %icon-before;
+            }
+        }
+    }
+    .personal-skills{
+        li{
+            &::before{
+                content: "\f058";
+                @extend %icon-before;
+            }
+        }
+    }
+    
+}
+/* End Personal */
+/* Start Services */
+.services{
+    .services-content{
+        .experience-items{
+            @extend %container-box;
+            padding-left: 20px !important;
+            .services-title{
+                color: $mainColor;
+            }
+            ul{ 
+
+                li{
+                    color: $textColorLight;
+                    font-size: 14px;
+                    position: relative;
+                    margin-bottom: 20px;
+                    &::before{
+                        content: "\f14a";
+                        @extend %icon-before;
+                    }
+                }
+            }
+        }
+        .box{
+            text-align: center;
+        img{
+            background: $linearGradient;
+            padding: 5px;
+            filter: contrast(200%);
+            border-radius: 20px;
+        }
+        }
+    }
+}
+/* End Services */
+/* Start Portfolio */
+.work{
+    .work-filters{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        .work-item{
+            color: $titleColor;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: $mainColor;
+            transition: 0.4s ease-in-out;
+            cursor: pointer;
+            &.active, &:hover{
+                background-color:darkslateblue;
+            }
+        }
+    }
+    .work-container{
+        .work-card{
+            @extend %container-box;
+            img{
+                border-radius: 20px;
+                height: 200px !important;
+                width: 100% !important;
+                margin-bottom: 20px;
+            }
+            h5{
+                color: $titleColor;
+                height: 80px;
+                font-size: 16px;
+                text-align: center;
+                line-height: 1.5;
+            }
+            .work-links{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                .code, .live{
+                    padding: 8px 10px;
+                    color: white;
+                    flex: 1;
+                    text-align: center;
+                    border-radius: 10px;
+                }
+                .code{
+                    background-color: $mainColor;
+                }
+                .live{
+                    background-color:cornflowerblue;
+                }
+            }
+        }
+    }
+}
+/* End Portfolio */
+/* Start Contact */
+.contact{
+    
+    .contact-title{
+        color: $titleColor;
+    }
+    .contact-info{
+        .contact-item{
+            @extend %container-box;
+            & > i{
+                color: $titleColor;
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+            h5{
+                color: $titleColor;
+            }
+            p{
+                color: $textColorLight;
+            }
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                color: $mainColor;
+                transition: 0.4s ease-in-out;
+                &:hover{
+                    color: $altColor;
+                }
+            }
+        }
+    }
+    form{
+        div{
+            margin-bottom: 20px;
+            width: 90%;
+            margin: 0 auto 30px;
+            input, textarea{
+                width: 100%;
+                padding: 20px;
+                background-color: transparent;
+                color: $textColorLight;
+                border: 2px solid $textColorLight;
+                border-radius: 15px;
+                outline: none;
+            }
+            label{
+                color: #babec4;
+                font-size: 18px;
+                position: absolute;
+                z-index: 2;
+                top: -13px;
+                left: 26px;
+                background-color: #0b111e;
+                padding: 0 7px;
+            }
+            textarea{
+                height: 180px;
+            }
+            textarea::placeholder, input::placeholder{
+                transition: 0.4s ease-in-out;
+            }
+            textarea:focus::placeholder, input:focus::placeholder{
+                opacity: 0;
+            }
+        }
+        button[type="submit"]{
+            background-color: $mainColor;
+            padding: 10px 30px;
+            color: $titleColor;
+            border-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            display: block;
+            width: 150px;
+            margin: auto;
+            transition: 0.4s ease-in-out;
+            &:hover{
+                background-color: $altColor;
+            }
+        }
+    }
+}
+/* End Contact */
+/* Start Footer */
+footer{
+    background-color: $mainColor;
+    padding: 70px 0;
+    overflow: hidden;
+    h1{
+        color: $bodyColor;
+        margin-bottom: 20px;
+    }
+    .footer-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 20px;
+        a{
+            width: 50px;
+            height: 50px;
+            background-color: $bodyColor;
+            border-radius: 10px;
+            color: $titleColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                font-size: 25px;
+                color: $textColorLight;
+                transition: 0.4s ease-in-out;
+            }
+            &:hover{
+                i{
+                    color: $titleColor;
+                }
+            }
+        }
+
+    }
+    .copyright{
+        color: $bodyColor;
+        font-size: 15px;
+        letter-spacing: 2px;
+        
+        span{
+            color: $titleColor;
+        }
+    }
+}
+/* End Footer */
+/* navbar open */
+.navbar-open{
+    position: fixed;
+    display: block;
+     @extend %center-y;
+    background-color: cornflowerblue;
+    color: $titleColor;
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    cursor: pointer;
+    right: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: 0.4s ease-in-out;
+    z-index: 999;
+}
+
+.hidden{
+    transform: scale(0)  !important;
+}
+.visible{
+    transform: scale(1)  translate(-50%) !important;
+    
+}
+/* start scroll to top */
+.scroll-to-top{
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: -60px;
+    background-color:darkslateblue;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    z-index: 999;
+    transition: 0.6s ease-in-out;
+    font-size: 23px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* end scroll to top */
+
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: hsl(219, 4%, 55%);
+}
+::-webkit-scrollbar-thumb{
+    background-color: $bodyColor;
+}
+
+body.light-theme{
+    background-color: #fafafa;
+    .section-subtitle{
+        color: $bodyColor;
+    }
+    header{
+        background-color: #484b6a;
+    }
+    .home-social-link{
+        background-color: #484b6a !important;
+    }
+    .home-greeting{
+        color: $bodyColor;
+    }
+    .home-title{
+        color: $bodyColor !important;
+    }
+    .home-name{
+        color: $mainColor !important; 
+    }
+    a.btn-primary{
+        color: $mainColor !important;
+    }
+    .about-boxes{
+        .box{
+            background-color: #484b6a;
+        }
+    }
+    .about-contact {
+        color: $bodyColor;
+    }
+    .about-box-desc{
+        color: #aaa !important;
+    }
+    .skills-content{
+        .box{
+            background-color: #484b6a;
+        }
+    }
+    .personal-content{
+        .box{
+            background-color: #484b6a;
+            ul{
+                li{
+                    color: #aaa !important;
+                }
+            }
+        }
+    }
+    .experience-items{
+        background-color: #484b6a !important;
+        ul{
+            li{
+                color: #aaa !important;
+            }
+        }
+    }
+    .work-card{
+        background-color: #484b6a !important;
+    }
+    .contact-title{
+        color: $bodyColor;
+    }
+    .contact-item{
+        background-color: #484b6a !important;
+        p{
+            color: #aaa !important;
+        }
+    }
+    label{
+        background-color: #484b6a !important;
+        border-radius: 5px;
+    }
+    .about, .personal, .work{
+        background-color: #eee;
+    }
+    .footer-links a{
+        background-color: #484b6a !important;
+    }
+}
+.skills{
+    padding-bottom: 0 !important;
+}

@@ -1,0 +1,256 @@
+doctype
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="css/bootstrap.min.css")
+    link(rel="stylesheet" href="css/all.min.css")
+    link(rel="stylesheet" href="css/aos.css")
+    link(rel="stylesheet" href="css/hover.css")
+    link(rel="stylesheet" href="css/style.css")
+    title My Portfolio
+  body
+    header.position-fixed.p-2
+      nav.container.d-flex.justify-content-between.align-items-center
+        a(href="#" class="nav-logo fs-4") 
+          img(src="./images/logo.png" alt="logo")
+        div.navbar-menu.position-fixed
+          ul.navbar-list.list-unstyled.d-flex.justify-content-between.align-items-center.m-0.flex-wrap
+            - var ulLinks = [{href: "#home", icon: "house"}, {href: "#about", icon: "user"}, {href: "#skills", icon: "book"}, {href: "#personal", icon: "circle-info"}, {href: "#services", icon: "address-book"}, {href: "#work", icon: "briefcase"}, {href: "#contact", icon: "message"}]
+            each ele in ulLinks
+              li.navbar-item
+                a(href=`${ele.href}` class=`navbar-link text-light d-flex fs-4 active-link hvr-pop`) 
+                  i(class=`fa-solid fa-${ele.icon}`)
+        // theme change button
+        span.change-theme
+          i(class="fa-regular fa-moon mode text-light fs-2 hvr-push")
+    main.main
+      section.sec-padding.home#home
+        div.home-container.container.position.relative.d-grid.gap-3
+          div.pt-3
+            div.home-info.text-center
+              span.home-greeting Hello, I Am 
+              h1.home-name.text-white Mohammed Yasser
+              h3.home-title.mb-3 Frontend Developer
+              div.home-btns.d-flex.justify-content-center.align-items-center.gap-3
+                a(href="images/cv.pdf" download class="btn btn-danger hvr-wobble-horizontal") Download CV 
+                a(href="#about" class="btn btn-primary hvr-wobble-horizontal") About Me
+            div.home-image.text-center.mt-4
+              img(src="./images/home.png" class="img-fluid" all="home image") 
+            div.home-social
+              a(href="https://www.facebook.com/profile.php?id=100008219671219" class="home-social-link hvr-pop")
+                i(class="fa-brands fa-facebook-square")
+              a(href="https://github.com/MohammedYasser2021" class="home-social-link hvr-pop")
+                i(class="fa-brands fa-github")
+              a(href="https://www.instagram.com/mohammed_yasser2021/" class="home-social-link hvr-pop")
+                i(class="fa-brands fa-instagram")
+            a.home-scroll.hvr-pulse-grow(href="#about")
+              span.home-scroll-name Scroll Down
+              i(class="fa-solid fa-computer-mouse")
+      section.about.sec-padding#about
+        .container
+          span.section-subtitle.d-block.text-center My Intro
+          h2.section-title.text-center.mb-5 About Me
+          div.about-content.row.gap-4
+            div.col-xl-5.mb-xl-0.mb-4
+              div.about-image 
+                img(src="images/me2.png" alt="about image" class="img-fluid")
+            div.col-xl-6
+              div.about-boxes.row.gap-3.mb-4
+                - var aboutBoxes = [{icon: "fa-regular fa-lightbulb", title: "Experience", desc: "1 Year"}, {icon: "fa-brands fa-github", title: "Completed", desc: "70 Repos On Github"}, {icon: "fa-solid fa-suitcase", title: "Templates", desc: "32 Templates"}]
+                each ele in aboutBoxes
+                  div.col.box.text-center
+                    i(class=ele.icon)
+                    h4(class="about-box-title my-2")= ele.title
+                    p(class="about-box-desc")= ele.desc
+              div.about-desc.lh-lg.mb-3.
+                I Am Frontent Developer With 1 Year Of Experience , Self-Realization, And Continuous Learning To Develop Myself In Line With Work Requirements And What The Company Aims To Achieve.
+              a(href="#contact" class="about-contact btn hvr-rectangle-in") Contact Me
+      section.skills#skills.sec-padding
+        .container
+          span.section-subtitle.d-block.text-center My Abilities
+          h2.section-title.text-center.mb-5 My Skills
+          .skills-content.row
+            .col-xl-6.mb-4
+              .box
+                h4(class="skills-title mb-4 text-center") Frontend Developer Skills
+                - var skillsItems = [{icon: "./images/skills icons/html5.png", title: "HTML"}, {icon: "./images/skills icons/css3.png", title: "CSS"}, {icon: "./images/skills icons/js.png", title: "JavaScript"}, {icon: "./images/skills icons/obj.png", title: "JS OOP"}, {icon: "./images/skills icons/apigee-icon.png", title: "Dealing With APIs"}, {icon:"./images/skills icons/jquery-icon.png", title: "JQuery"}, {icon: "./images/skills icons/bootstrap-icon.png", title: "Bootstrap"}, {icon: "./images/skills icons/es6.png", title: "ES6"}, {icon: "./images/skills icons/sass-icon.png", title: "SASS"}, {icon: "./images/skills icons/pug-icon.png", title: "Pug JS"}, {icon: "/images/skills icons/react-icon.png", title: "React Basics"}, {icon: "/images/skills icons/react-hooks-icon.png", title: "React Hooks"}, {icon: "/images/skills icons/react-router-logo.png", title: "React Router"}, {icon: "/images/skills icons/react-icon.png", title: "React Context API"}, {icon: "/images/skills icons/redux.png", title: "Redux"}, {icon: "/images/skills icons/redux.png", title: "Redux Toolkit"}]
+                div.skill-items.row
+                  each ele in skillsItems
+                    div.mb-4.col-sm-6.col-md-4
+                      img.hvr-pop(src=ele.icon alt="skill-icon")
+                      h5(class="skill-item-title")= ele.title
+            .col-xl-6.mb-xl-0.mb-4
+              .box
+                h4(class="skills-title mb-4 text-center") Other Skills
+                - var skillsItems = [{icon: "./images/skills icons/github.png", title: "Github"}, {icon: "./images/skills icons/aws-cli.png", title: "Command Lines"}, {icon: "./images/skills icons/microsoft-word.png", title: "Word"}, {icon: "./images/skills icons/microsoft-powerpoint.png", title: "Powerpoint"}]
+                div.skill-items.row
+                  each ele in skillsItems
+                    div.col-sm-6.mb-4
+                      img.hvr-pop(src=ele.icon alt="skill-icon")
+                      h5(class="skill-item-title")= ele.title
+        section.personal.sec-padding#personal
+          .container
+            span.section-subtitle.d-block.text-center Info About Me
+            h2.section-title.text-center.mb-5 Personal Info
+            div.personal-content.row
+              div.col-xl-6.mb-xl-0.mb-4
+                .box
+                  h4(class="personal-title mb-4 text-center") My Info
+                  ul.lh-lg.info
+                    li #[span Phone:] 01276043556
+                    li #[span E-Mail:] mohammedyasser2019b@gmail.com
+                    li #[span Birth Date:] 13 - 9 - 1997
+                    li #[span Address:] Al Awasga - Hehia - AL Sharqia - Egypt
+                    li #[span Education:] Bachelor’s degree in Computers and Information Department of Information Systems , Zagazig University
+                    li #[span Degree:] Very Good
+                    li #[span Languages:] Arabic (Native) - English (Good)
+              div.col-xl-6.mb-xl-0.mb-4
+                .box
+                  h4(class="personal-title mb-4 text-center") Personal Skills
+                  ul.personal-skills
+                    li Ability To Make Decision 
+                    li Problem Solving
+                    li Ability To Work In Team
+                    li Completely Focused
+                    li Ability To Work Under Pressure
+                    li Ability To Search
+                    li Ability To Work In Deadline
+                    li Ability To Learn Easily
+        section.services.sec-padding#services
+          .container 
+            span.section-subtitle.d-block.text-center My Services
+            h2.section-title.text-center.mb-5 What I Can Offer
+            div.services-content.row.align-items-center
+              div.col-xl-7.mb-xl-0.mb-4
+                div.experience-items
+                  h4(class="services-title mb-4 text-center") My Experience
+                  ul.lh-lg
+                    li Designed Dynamic and browser compatible pages using with HTML5, CSS, JavaScript, JQuery 
+                    li Design Responsive Design to be compatible with all screens using grid, grid system in bootstrap, and media query
+                    li Using Bootstrap framework to add classes in design to save time and effort
+                    li Using preprocessors such as Sass in CSS and engine template such as pug js in HTML for saving time and using programming concepts to save effort and To get an organized code in HTML and CSS
+                    li Build Single App Aplication(SPA) By React Library and React Hooks and Navigation between pages on the website by using React Router
+                    li Using Redux and Redux Toolkit for Making One Store For Using in global website
+              div.col-xl-5
+                div.box
+                  img(src="images/service.png" alt="service-image" class="img-fluid")
+        section.work.sec-padding#work
+          .container
+            span.section-subtitle.d-block.text-center My Portfolio
+            h2.section-title.text-center.mb-5 Recent Works
+            div.work-filters.mb-5
+              - var filterBtns = [{content: "All", filter: "all"}, {content: "Apps", filter: ".app"}, {content: "Templates", filter: ".template"}, {content: "Tutorials", filter: ".tutorial"}, {content: "Games", filter: ".game"}]
+              each ele in filterBtns 
+                span.work-item.hvr-wobble-horizontal(data-filter=ele.filter)= ele.content
+            div.work-container.row
+              - var workCardsApp = [{clas:"app", image: "./images/works/apps/app-1.jpg", title: "Crud-App-Using-JavaScript-And-Firebase", code: "https://github.com/MohammedYasser2021/Crud-App-Using-JavaScript-And-Firebase", live: "https://mohammedyasser2021.github.io/Crud-App-Using-JavaScript-And-Firebase/"}, {clas: "app", image: "./images/works/apps/ebad-elrahman.jpg", title: "Ebad-AlRahman", code: "https://github.com/MohammedYasser2021/Ebad-AlRahman", live: "https://mohammedyasser2021.github.io/Ebad-AlRahman/"}, {clas: "app", image: "./images/works/apps/app-2.jpg", title: "Convert-Speech-To-Text-And-Search-On-Text-on-Google", code: "https://github.com/MohammedYasser2021/Convert-Speech-To-Text-And-Search-On-Text-on-Google", live: "https://mohammedyasser2021.github.io/Convert-Speech-To-Text-And-Search-On-Text-on-Google/"}, {clas: "app", image: "./images/works/apps/app-3.jpg", title: "Convert-Text-To-Speech-By-Wep-Speech-Api", code: "https://github.com/MohammedYasser2021/Convert-Text-To-Speech-By-Wep-Speech-Api", live: "https://mohammedyasser2021.github.io/Convert-Text-To-Speech-By-Wep-Speech-Api/"},{clas: "app", image: "./images/works/apps/app-4.jpg", title: "Send-Gmail-by-Pure-JavaScript", code: "https://github.com/MohammedYasser2021/Send-Gmail-by-Pure-JavaScript", live: "https://mohammedyasser2021.github.io/Send-Gmail-by-Pure-JavaScript/"}, {clas: "app", image: "./images/works/apps/cart by js.png", title: "Google-Map-Using-JavaScript", code: "https://github.com/MohammedYasser2021/Google-Map-Using-JavaScript", live: "https://mohammedyasser2021.github.io/Google-Map-Using-JavaScript/"}, {clas: "app", image: "./images/works/apps/app-5.png", title: "ToDo-List-By-JQuery", code: "https://github.com/MohammedYasser2021/ToDo-List-By-JQuery", live: "https://mohammedyasser2021.github.io/ToDo-List-By-JQuery/"}, {clas: "app", image: "./images/works/apps/app-6.png", title: "Color-Flipper", code: "https://github.com/MohammedYasser2021/Color-Flipper", live: "https://mohammedyasser2021.github.io/Color-Flipper/"}, {clas: "app", image: "./images/works/apps/app-7.jpg", title: "Nice-Testimonials", code: "https://github.com/MohammedYasser2021/Nice-Testimonials", live: "https://mohammedyasser2021.github.io/Nice-Testimonials/"}, {clas:"app", image: "./images/works/apps/app-8.png", title: "Local-Storage-Control", code: "https://github.com/MohammedYasser2021/Local-Storage-Control", live: "https://mohammedyasser2021.github.io/Local-Storage-Control/"}, {clas:"app", image: "./images/works/apps/app-9.jpg", title: "Heart-Animation", code: "https://github.com/MohammedYasser2021/Heart-Animation", live: "https://mohammedyasser2021.github.io/Heart-Animation/"}, {clas:"app", image: "./images/works/apps/app-10.png", title: "Grocery-Bud", code: "https://github.com/MohammedYasser2021/Grocery-Bud", live: "https://mohammedyasser2021.github.io/Grocery-Bud/"}, {clas:"app", image: "./images/works/apps/app-11.png", title: "Get-Github-Repos", code: "https://github.com/MohammedYasser2021/Get-Github-Repos-", live: "https://mohammedyasser2021.github.io/Get-Github-Repos-/"}, {clas: "app", image: "./images/works/apps/app-12.png", title: "Quiz-App-By-Oop-Js", code: "https://github.com/MohammedYasser2021/Quiz-App-By-Oop-Js", live: "https://mohammedyasser2021.github.io/Quiz-App-By-Oop-Js/"}, {clas: "app", image: "./images/works/apps/app-13.png", title: "Quiz-App-By-Js", code: "https://github.com/MohammedYasser2021/Quiz-App-By-Js", live: "https://mohammedyasser2021.github.io/Quiz-App-By-Js/"}, {clas: "app", image: "./images/works/apps/app-14.png", title: "Cart By JS", code: "https://github.com/MohammedYasser2021/18th-template", live: "https://mohammedyasser2021.github.io/18th-template/"}] 
+              - var workCardsReact = [{clas: "react", image: "./images/works/react/react-1.jpg", title: "React-Weather-App", code: "https://github.com/MohammedYasser2021/React-Weather-App", live: "https://victorious-advice.surge.sh/"}, {clas: "react", image: "./images/works/react/react-2.jpg", title: "Simple-Cart-By-React", code: "https://github.com/MohammedYasser2021/Simple-Cart-By-React", live: "https://parsimonious-clocks.surge.sh/"}, {clas: "react", image: "./images/works/react/react-3.jpg", title: "React-ToDo-List-App", code: "https://github.com/MohammedYasser2021/React-ToDo-List-App", live: "https://capricious-plantation.surge.sh/"}, {clas: "react", image: "./images/works/react/react-4.jpg", title: "React-Template-1", code: "https://github.com/MohammedYasser2021/React-Template-1", live: "https://violent-sack.surge.sh/"}, {clas: "react", image: "./images/works/react/react-5.png", title: "Login-Authentication-By-React-Hooks-and-React-Context-Api", code: "https://github.com/MohammedYasser2021/Login-Authentication-By-React-Hooks-and-React-Context-Api", live: "https://jobless-story.surge.sh/"}, {clas: "react", image: "./images/works/react/react-6.png", title: "React-Crud-App", code: "https://github.com/MohammedYasser2021/React-Crud-App", live: "https://lonely-plane.surge.sh/"}]
+              - var workCardsGame =  [{clas: "game", image: "./images/works/games/game-1.jpg", title: "Typing-Speed-Test-Game", code: "https://github.com/MohammedYasser2021/Typing-Speed-Test-Game", live: "https://mohammedyasser2021.github.io/Typing-Speed-Test-Game/"}, {clas: "game", image: "./images/works/games/game-2.jpg", title: "War-Game-Using-OOP-JS", code: "https://github.com/MohammedYasser2021/War-Game-Using-OOP-JS", live: "https://mohammedyasser2021.github.io/War-Game-Using-OOP-JS/"}, {clas: "game", image: "./images/works/games/game-3.jpg", title: "Hangman-Game", code: "https://github.com/MohammedYasser2021/Hangman-Game", live: "https://mohammedyasser2021.github.io/Hangman-Game/"}, {clas: "game", image: "./images/works/games/game-4.jpg", title: "Memory-Game", code: "https://github.com/MohammedYasser2021/Memory-Game", live: "https://mohammedyasser2021.github.io/Memory-Game/"}]
+              - var workCardsTemplates = [{clas: "template", image: "./images/works/templates/template-2.png", title: "New-Template-1", code: "https://github.com/MohammedYasser2021/New-Template-33", live: "https://mohammedyasser2021.github.io/New-Template-33/"}, {clas:"template", image: "./images/works/templates/template-3.jpg", title: "New-Template-2", code: "https://github.com/MohammedYasser2021/32th-template", live: "https://mohammedyasser2021.github.io/32th-template/"}, {clas: "react", image: "./images/works/templates/template-4.jpg", title: "New-Template-3", code: "https://github.com/MohammedYasser2021/31th-template", live: "https://mohammedyasser2021.github.io/31th-template/"}, {clas: "template", image: "./images/works/templates/template-6.jpg", title: "New-Template-4", code: "https://github.com/MohammedYasser2021/30th-template", live: "https://mohammedyasser2021.github.io/30th-template/"}, {clas: "template", image: "./images/works/templates/template-7.jpg", title: "New-Template-5", code: "https://github.com/MohammedYasser2021/29th-template", live: "https://mohammedyasser2021.github.io/29th-template/"}, {clas: "template", image: "./images/works/templates/template-8.jpg", title: "New-Template-6", code: "https://github.com/MohammedYasser2021/28th-template", live: "https://mohammedyasser2021.github.io/28th-template/"}, {clas: "template", image: "./images/works/templates/template-9.jpg", title: "New-Template-7", code: "https://github.com/MohammedYasser2021/27th-template", live: "https://mohammedyasser2021.github.io/27th-template/"}, {clas: "template", image: "./images/works/templates/template-10.jpg", title: "New-Template-8", code: "https://github.com/MohammedYasser2021/26th-template", live: "https://mohammedyasser2021.github.io/26th-template/"}, {clas: "template", image: "./images/works/templates/template-11.jpg", title: "New-Template-9", code: "https://github.com/MohammedYasser2021/25th-template", live: "https://mohammedyasser2021.github.io/25th-template/"}, {clas: "template", image: "./images/works/templates/template-12.jpg", title: "New-Template-10", code: "https://github.com/MohammedYasser2021/24th-template", live: "https://mohammedyasser2021.github.io/24th-template/"}, {clas: "template", image: "./images/works/templates/template-14.jpg", title: "New-Template-11", code: "https://github.com/MohammedYasser2021/22th---template", live: "https://mohammedyasser2021.github.io/22th---template/"}, {clas: "template", image: "./images/works/templates/template-15.jpg", title: "New-Template-12", code: "https://github.com/MohammedYasser2021/21th---template", live: "https://mohammedyasser2021.github.io/21th---template/"}, {clas: "template", image: "./images/works/templates/template-16.jpg", title: "New-Template-13", code: "https://github.com/MohammedYasser2021/20th---template", live: "https://mohammedyasser2021.github.io/20th---template/"}, {clas: "template", image: "./images/works/templates/template-17.jpg", title: "New-Template-14", code: "https://github.com/MohammedYasser2021/19-template", live: "https://mohammedyasser2021.github.io/19-template/bibox.html"}, {clas: "template", image: "./images/works/templates/template-19.png", title: "New-Template-15", code: "https://github.com/MohammedYasser2021/17th-template", live: "https://mohammedyasser2021.github.io/17th-template/"}, {clas: "template", image: "./images/works/templates/template-20.png", title: "New-Template-16", code: "https://github.com/MohammedYasser2021/16th-template", live: "https://mohammedyasser2021.github.io/16th-template/"}, {clas: "template", image: "./images/works/templates/template-21.png", title: "New-Template-17", code: "https://github.com/MohammedYasser2021/15th-template", live: "https://mohammedyasser2021.github.io/15th-template/"}, {clas: "template", image: "./images/works/templates/template-22.png", title: "New-Template-18", code: "https://github.com/MohammedYasser2021/14th-template", live: "https://mohammedyasser2021.github.io/14th-template/"}, {clas: "template", image: "./images/works/templates/template-23.jpg", title: "New-Template-19", code: "https://github.com/MohammedYasser2021/12th-template", live: "https://mohammedyasser2021.github.io/12th-template/"}, {clas: "template", image: "./images/works/templates/template-24.jpg", title: "New-Template-20", code: "https://github.com/MohammedYasser2021/11th-template", live: "https://mohammedyasser2021.github.io/11th-template/"}, {clas: "template", image: "./images/works/templates/template-25.jpg", title: "New-Template-21", code: "https://github.com/MohammedYasser2021/10th-template", live: "https://mohammedyasser2021.github.io/10th-template/"}, {clas: "template", image: "./images/works/templates/template-26.jpg", title: "New-Template-22", code: "https://github.com/MohammedYasser2021/9th-template", live: "https://mohammedyasser2021.github.io/9th-template/"}, {clas: "template", image: "./images/works/templates/template-27.jpg", title: "New-Template-23", code: "https://github.com/MohammedYasser2021/eight-template", live: "https://mohammedyasser2021.github.io/eight-template/"}, {clas: "template", image: "./images/works/templates/template-28.jpg", title: "New-Template-24", code: "https://github.com/MohammedYasser2021/seven-template", live: "https://mohammedyasser2021.github.io/seven-template/"}, {clas: "template", image: "./images/works/templates/template-29.jpg", title: "New-Template-25", code: "https://github.com/MohammedYasser2021/six-template", live: "https://mohammedyasser2021.github.io/six-template/"}, {clas: "template", image: "./images/works/templates/template-30.png", title: "New-Template-26", code: "https://github.com/MohammedYasser2021/fourth_template", live: "https://mohammedyasser2021.github.io/fourth_template/"}, {clas: "template", image: "./images/works/templates/template-31.png", title: "New-Template-27", code: "https://github.com/MohammedYasser2021/template-three", live: "https://mohammedyasser2021.github.io/template-three/"}, {clas: "template", image: "./images/works/templates/template-32.jpg", title: "New-Template-28", code: "https://github.com/MohammedYasser2021/template-one", live: "https://mohammedyasser2021.github.io/template-one/index1.html"}]
+              - var workCardsTutorials = [{clas: "tutorial", image: "./images/works/tutorials/tutorial-1.jpg", title: "Image-Slider-Accordion", code: "https://github.com/MohammedYasser2021/Image-Slider-Accordion", live: "https://mohammedyasser2021.github.io/Image-Slider-Accordion/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-2.png", title: "Animated-Login-Form", code: "https://github.com/MohammedYasser2021/Animated-Login-Form", live: "https://mohammedyasser2021.github.io/Animated-Login-Form/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-3.jpg", title: "JQuery-Tutorials-template", code: "https://github.com/MohammedYasser2021/JQuery-Tutorials", live: "https://mohammedyasser2021.github.io/JQuery-Tutorials/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-4.png", title: "Video-Project", code: "https://github.com/MohammedYasser2021/Video-Project", live: "https://mohammedyasser2021.github.io/Video-Project/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-5.jpg", title: "Slide-Show", code: "https://github.com/MohammedYasser2021/Slide-Show", live: "https://github.com/MohammedYasser2021/Slide-Show"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-6.png", title: "Scroll-Project", code: "https://github.com/MohammedYasser2021/Scroll-Project", live: "https://mohammedyasser2021.github.io/Scroll-Project/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-7.jpg", title: "Nice-Sidebar", code: "https://github.com/MohammedYasser2021/Nice-Sidebar", live: "https://mohammedyasser2021.github.io/Nice-Sidebar/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-8.jpg", title: "Random-Quotes", code: "https://github.com/MohammedYasser2021/Random-Quotes", live: "https://mohammedyasser2021.github.io/Random-Quotes/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-9.jpg", title: "Menu-Filter", code: "https://github.com/MohammedYasser2021/Menu-Filter", live: "https://mohammedyasser2021.github.io/Menu-Filter/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-10.png", title: "Nice-Modal", code: "https://github.com/MohammedYasser2021/Nice-Modal", live: "https://mohammedyasser2021.github.io/Nice-Modal/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-11.jpg", title: "Nice-Slider", code: "https://github.com/MohammedYasser2021/Nice-Slider", live: "https://mohammedyasser2021.github.io/Nice-Slider/"}, {clas: "tutorial", image: "./images/works/tutorials/tutotial-12.jpg", title: "Questions-Accordion", code: "https://github.com/MohammedYasser2021/Questions-Accordion", live: "https://mohammedyasser2021.github.io/Questions-Accordion/"}]
+              each ele in workCardsApp
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                  div.work-card
+                    img(src=ele.image class="img-fluid" alt="img-app")
+                    h5(class="work-title")= ele.title
+                    div.work-links 
+                      a(href=ele.code class="code") Code
+                      a(href=ele.live class="live") Preview
+              each ele in workCardsReact
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                  div.work-card
+                    img(src=ele.image class="img-fluid" alt="img-app")
+                    h5(class="work-title")= ele.title
+                    div.work-links 
+                      a(href=ele.code class="code") Code
+                      a(href=ele.live class="live") Preview
+              each ele in workCardsGame
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                  div.work-card
+                    img(src=ele.image class="img-fluid" alt="img-app")
+                    h5(class="work-title")= ele.title
+                    div.work-links 
+                      a(href=ele.code class="code") Code
+                      a(href=ele.live class="live")  Preview
+              each ele in workCardsTemplates
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                  div.work-card
+                    img(src=ele.image class="img-fluid" alt="img-app")
+                    h5(class="work-title")= ele.title
+                    div.work-links 
+                      a(href=ele.code class="code") Code
+                      a(href=ele.live class="live") Preview
+              each ele in workCardsTutorials
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                  div.work-card
+                    img(src=ele.image class="img-fluid" alt="img-app")
+                    h5(class="work-title")= ele.title
+                    div.work-links 
+                      a(href=ele.code class="code") Code
+                      a(href=ele.live class="live") Preview
+        section.contact.sec-padding#contact.text-center
+          .container
+            span.section-subtitle.d-block.text-center Get In Touch
+            h2.section-title.text-center.mb-5 Contact Me
+            div.contact-content.row
+              div.col-xl-6.mb-xl-0.mb-4
+                div.box
+                  h3.contact-title.mb-5 Talk With Me
+                  div.contact-info.row
+                    div.col-10.mb-3.contact-item.mx-auto
+                      i(class="fa-solid fa-envelope hvr-pop")
+                      h5 Email
+                      p mohammedyasser2019b@gmail.com
+                      a(href="mailto:mohammedyasser2019b@gmail.com" target="_blank" class="hvr-pulse-grow") #[span Send Me] #[i(class="fa-solid fa-message")]
+                    div.col-10.mb-3.contact-item.mx-auto
+                      i(class="fa-brands fa-whatsapp hvr-pop")
+                      h5 Whatsapp
+                      p 01276043556
+                      a(href="https://api.whatsapp.com/send/?phone=01276043556&text&app_absent=0" target="_blank" class="hvr-pulse-grow") #[span Send Me] #[i(class="fa-solid fa-message")]
+                    div.col-10.mb-3.mx-auto.contact-item
+                      i(class="fa-brands fa-facebook-messenger hvr-pop")
+                      h5 Messenger
+                      p Mohammed Yasser
+                      a(href="https://m.me/mohammedyasser2022" target="_blank" class="hvr-pulse-grow") #[span Send Me] #[i(class="fa-solid fa-message")]
+              div.col-xl-6
+                div.box
+                  h3.contact-title.mb-5 Write Your Message To Me
+                  form
+                    div.position-relative
+                      label(for="name") Your Name
+                      input(type="text" placeholder="Type Your Name" id="name")
+                    div.position-relative
+                      label(for="mail") Your Email
+                      input(type="email" placeholder="Type Your Mail" id="mail")
+                    div.position-relative
+                      label(for="message") Your Message
+                      textarea(placeholder="Type Your Message" id="message")
+                    button(type="submit" class="hvr-wobble-horizontal") Send
+        footer.text-center.m-0
+          .container
+            h1 Mohammed Yasser
+            div.footer-links
+              a(href="https://www.facebook.com/profile.php?id=100008219671219" class="home-social-link hvr-pop")
+                i(class="fa-brands fa-facebook-square")
+              a(href="https://github.com/MohammedYasser2021" class="home-social-link hvr-pop")
+                i(class="fa-brands fa-github")
+              a(href="https://www.instagram.com/mohammed_yasser2021/" class="home-social-link hvr-pop")
+                i(class="fa-brands fa-instagram")
+            p.copyright.m-0 All Copyrights &copy; Reserved In 2022 Created By #[span Mohammed Yasser]
+        span.navbar-open
+          i(class="fa-solid fa-bars")
+        span(class="scroll-to-top hvr-wobble-horizontal")
+          i(class="fa-solid fa-angles-up")
+
+    // start Email Js
+    script(src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" type="text/javascript")
+    // End Email Js
+    script(src="js/jquery-3.6.0.min.js")
+    script(src="js/bootstrap.bundle.js")
+    script(src="js/aos.js")
+    script(src="js/mixitup.min.js")
+    script(src="js/main.js")
