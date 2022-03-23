@@ -71,9 +71,16 @@ window.addEventListener('scroll', function () {
     navbarMenu.classList.add('visible')
   }
 })
-
+let navOpenIcon = document.querySelector('.bar')
 navOpen.addEventListener('click', function () {
   navbarMenu.classList.toggle('visible')
+  if (navbarMenu.classList.contains('visible')) {
+    navOpenIcon.classList.remove('fa-bars')
+    navOpenIcon.classList.add('fa-xmark')
+  } else {
+    navOpenIcon.classList.remove('fa-xmark')
+    navOpenIcon.classList.add('fa-bars')
+  }
 })
 
 // scroll to top

@@ -446,7 +446,7 @@ header .change-theme {
 
 @media (max-width: 575px) {
   .personal .info li::before {
-    margin-top: 3px;
+    top: 12px;
   }
 }
 
@@ -460,7 +460,7 @@ header .change-theme {
 
 @media (max-width: 575px) {
   .personal .personal-skills li::before {
-    margin-top: 3px;
+    top: 12px;
   }
 }
 
@@ -487,7 +487,7 @@ header .change-theme {
 
 @media (max-width: 575px) {
   .services .services-content .experience-items ul li::before {
-    margin-top: 3px;
+    top: 12px;
   }
 }
 
@@ -550,6 +550,12 @@ header .change-theme {
   line-height: 1.5;
 }
 
+@media (max-width: 400px) {
+  .work .work-container .work-card h5 {
+    height: 95px;
+  }
+}
+
 .work .work-container .work-card .work-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,6 +605,8 @@ header .change-theme {
 
 .contact .contact-info .contact-item p {
   color: #888b91;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .contact .contact-info .contact-item a {
