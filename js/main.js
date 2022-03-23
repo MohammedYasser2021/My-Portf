@@ -60,18 +60,20 @@ document.querySelector('form').addEventListener('submit', (e) => {
 // open navbar
 let navOpen = document.querySelector('.navbar-open')
 let navbarMenu = document.querySelector('.navbar-menu')
+let navOpenIcon = document.querySelector('.bar')
 window.addEventListener('scroll', function () {
   if (this.scrollY > 80) {
     navOpen.style.right = '20px'
     navbarMenu.classList.remove('visible')
     navbarMenu.classList.add('hidden')
+    navOpenIcon.classList.remove('fa-xmark')
+    navOpenIcon.classList.add('fa-bars')
   } else {
     navOpen.style.right = '-60px'
     navbarMenu.classList.remove('hidden')
     navbarMenu.classList.add('visible')
   }
 })
-let navOpenIcon = document.querySelector('.bar')
 navOpen.addEventListener('click', function () {
   navbarMenu.classList.toggle('visible')
   if (navbarMenu.classList.contains('visible')) {

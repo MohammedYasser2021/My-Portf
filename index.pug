@@ -84,22 +84,22 @@ html(lang="en")
                       img.hvr-pop(src=ele.icon alt="skill-icon")
                       h5(class="skill-item-title")= ele.title
                   div.mb-4.col-sm-6.col-md-4
-                    i(class="fa-brands fa-react")
+                    i.hvr-pop(class="fa-brands fa-react")
                     h5(class="skill-item-title") React Basics
                   div.mb-4.col-sm-6.col-md-4
-                    i(class="fa-brands fa-react")
+                    i.hvr-pop(class="fa-brands fa-react")
                     h5(class="skill-item-title") React Hooks
                   div.mb-4.col-sm-6.col-md-4
-                    i(class="fa-brands fa-react")
+                    i.hvr-pop(class="fa-brands fa-react")
                     h5(class="skill-item-title") React Router
                   div.mb-4.col-sm-6.col-md-4
-                    i(class="fa-brands fa-react")
+                    i.hvr-pop(class="fa-brands fa-react")
                     h5(class="skill-item-title") React Context API
                   div.mb-4.col-sm-6.col-md-4
-                    i(class="fa-brands fa-react")
+                    i.hvr-pop(class="fa-brands fa-react")
                     h5(class="skill-item-title") Redux
                   div.mb-4.col-sm-6.col-md-4
-                    i(class="fa-brands fa-react")
+                    i.hvr-pop(class="fa-brands fa-react")
                     h5(class="skill-item-title") Redux Toolkit
             .col-xl-6.mb-xl-0.mb-4
               .box
@@ -107,9 +107,12 @@ html(lang="en")
                 - var skillsItems = [{icon: "./images/skills icons/github.png", title: "Github"}, {icon: "./images/skills icons/aws-cli.png", title: "Command Lines"}, {icon: "./images/skills icons/microsoft-word.png", title: "Word"}, {icon: "./images/skills icons/microsoft-powerpoint.png", title: "Powerpoint"}]
                 div.skill-items.row
                   each ele in skillsItems
-                    div.col-sm-6.mb-4
+                    div.col-sm-6.mb-4 
                       img.hvr-pop(src=ele.icon alt="skill-icon")
                       h5(class="skill-item-title")= ele.title
+                  div.col-12.mb-4 
+                    i.hvr-pop(class="fa-regular fa-chart-bar")
+                    h5(class="skill-item-title lh-base") Understanding of System Anslysis Life Cycles(Planning - Analysis - Design - Implementaion) Concepts
         section.personal.sec-padding#personal
           .container
             span.section-subtitle.d-block.text-center Info About Me
