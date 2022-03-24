@@ -66,15 +66,14 @@ html(lang="en")
                     i(class=ele.icon)
                     h4(class="about-box-title my-2")= ele.title
                     p(class="about-box-desc")= ele.desc
-              div.about-desc.lh-lg.mb-3(data-aos="fade-left" data-aos-delay="2800") 
-                I Am Frontent Developer With 1 Year Of Experience , Self-Realization, And Continuous Learning To Develop Myself In Line With Work Requirements And What The Company Aims To Achieve.
-              a(href="#contact" class="about-contact btn hvr-rectangle-in" data-aos="fade-up" data-aos-delay="2800") Contact Me
+              p.about-desc.lh-lg.mb-3(data-aos="fade-left" data-aos-delay="2500") I Am Frontent Developer With 1 Year Of Experience , Self-Realization, And Continuous Learning To Develop Myself In Line With Work Requirements And What The Company Aims To Achieve.
+              a(href="#contact" class="about-contact btn hvr-rectangle-in" data-aos="fade-up" data-aos-delay="2500") Contact Me
       section.skills#skills.sec-padding
         .container
           span.section-subtitle.d-block.text-center My Abilities
           h2.section-title.text-center.mb-5 My Skills
           .skills-content.row
-            .col-xl-6.mb-4(data-aos="fade-right" data-aos-delay="3500")
+            .col-xl-6.mb-4(data-aos="fade-right" data-aos-delay="3200")
               .box
                 h4(class="skills-title mb-4 text-center") Frontend Developer Skills
                 - var skillsItems = [{icon: "./images/skills icons/html5.png", title: "HTML"}, {icon: "./images/skills icons/css3.png", title: "CSS"}, {icon: "./images/skills icons/js.png", title: "JavaScript"}, {icon: "./images/skills icons/obj.png", title: "JS OOP"}, {icon: "./images/skills icons/apigee-icon.png", title: "Dealing With APIs"}, {icon:"./images/skills icons/jquery-icon.png", title: "JQuery"}, {icon: "./images/skills icons/bootstrap-icon.png", title: "Bootstrap"}, {icon: "./images/skills icons/es6.png", title: "ES6"}, {icon: "./images/skills icons/sass-icon.png", title: "SASS"}, {icon: "images/skills icons/pug-icon.png", title: "Pug JS"}]
@@ -101,7 +100,7 @@ html(lang="en")
                   div.mb-4.col-sm-6.col-md-4
                     i.hvr-pop(class="fa-brands fa-react")
                     h5(class="skill-item-title") Redux Toolkit
-            .col-xl-6.mb-xl-0.mb-4(data-aos="fade-left" data-aos-delay="4200")
+            .col-xl-6.mb-xl-0.mb-4(data-aos="fade-left" data-aos-delay="3900")
               .box
                 h4(class="skills-title mb-4 text-center") Other Skills
                 - var skillsItems = [{icon: "./images/skills icons/github.png", title: "Github"}, {icon: "./images/skills icons/aws-cli.png", title: "Command Lines"}, {icon: "./images/skills icons/microsoft-word.png", title: "Word"}, {icon: "./images/skills icons/microsoft-powerpoint.png", title: "Powerpoint"}]
@@ -118,7 +117,7 @@ html(lang="en")
             span.section-subtitle.d-block.text-center Info About Me
             h2.section-title.text-center.mb-5 Personal Info
             div.personal-content.row
-              div.col-xl-6.mb-xl-0.mb-4(data-aos="flip-left" data-aos-delay="4900")
+              div.col-xl-6.mb-xl-0.mb-4(data-aos="flip-left" data-aos-delay="4600")
                 .box
                   h4(class="personal-title mb-4 text-center") My Info
                   ul.lh-lg.info
@@ -129,7 +128,7 @@ html(lang="en")
                     li #[span Education:] #[p Bachelor’s degree in Computers and Information Department of Information Systems , Zagazig University]
                     li #[span Degree:] #[p Very Good]
                     li #[span Languages:] #[p Arabic (Native) - English (Good)]
-              div.col-xl-6.mb-xl-0.mb-4(data-aos="flip-right" data-aos-delay="5600")
+              div.col-xl-6.mb-xl-0.mb-4(data-aos="flip-right" data-aos-delay="5200")
                 .box
                   h4(class="personal-title mb-4 text-center") Personal Skills
                   ul.personal-skills
@@ -146,7 +145,7 @@ html(lang="en")
             span.section-subtitle.d-block.text-center My Services
             h2.section-title.text-center.mb-5 What I Can Offer
             div.services-content.row.align-items-center
-              div.col-xl-7.mb-xl-0.mb-4(data-aos="flip-up" data-aos-delay="6300")
+              div.col-xl-7.mb-xl-0.mb-4(data-aos="flip-up" data-aos-delay="5900")
                 div.experience-items
                   h4(class="services-title mb-4 text-center") My Experience
                   ul.lh-lg
@@ -156,7 +155,7 @@ html(lang="en")
                     li Using preprocessors such as Sass in CSS and engine template such as pug js in HTML for saving time and using programming concepts to save effort and To get an organized code in HTML and CSS
                     li Build Single Page Application(SPA) By React Library and React Hooks and Navigation between pages on the website by using React Router
                     li Using Redux and Redux Toolkit for Making One Store For Using in global website
-              div.col-xl-5(data-aos="flip-down" data-aos-delay="7000")
+              div.col-xl-5(data-aos="flip-down" data-aos-delay="6600")
                 div.box
                   img(src="images/service.png" alt="service-image" class="img-fluid")
         section.work.sec-padding#work
@@ -240,7 +239,7 @@ html(lang="en")
               div.col-xl-6(data-aos="fade-left" data-aos-delay="8300")
                 div.box
                   h3.contact-title.mb-5 Write Your Message To Me
-                  form
+                  form 
                     div.position-relative
                       label(for="name") Your Name
                       input(type="text" placeholder="Type Your Name" id="name")
