@@ -113,3 +113,17 @@ theme.addEventListener('click', function () {
     themeIcon.classList.remove('fa-sun')
   }
 })
+
+let hours = new Date().getHours()
+
+if (hours > 16 && hours <= 4) {
+  themeIcon.classList.add('fa-moon')
+  themeIcon.classList.remove('fa-sun')
+  document.body.classList.remove('light-theme')
+} else if (hours > 4 && hours <= 16) {
+  document.body.classList.add('light-theme')
+  themeIcon.classList.remove('fa-moon')
+  themeIcon.classList.add('fa-sun')
+}
+
+AOS.init()

@@ -31,14 +31,14 @@ html(lang="en")
       section.sec-padding.home#home
         div.home-container.container.position.relative.d-grid.gap-3
           div.pt-3
-            div.home-info.text-center
+            div.home-info.text-center(data-aos="fade-down")
               span.home-greeting Hello, I Am 
               h1.home-name.text-white Mohammed Yasser
               h3.home-title.mb-3 Frontend Developer
               div.home-btns.d-flex.justify-content-center.align-items-center.gap-3
                 a(href="images/cv.pdf" download class="btn btn-danger hvr-wobble-horizontal") Download CV 
                 a(href="#about" class="btn btn-primary hvr-wobble-horizontal") About Me
-            div.home-image.text-center.mt-4
+            div.home-image.text-center.mt-4(data-aos="fade-left" data-aos-delay="700")
               img(src="./images/home.png" class="img-fluid" all="home image") 
             div.home-social
               a(href="https://www.facebook.com/profile.php?id=100008219671219" class="home-social-link hvr-pop")
@@ -56,25 +56,25 @@ html(lang="en")
           h2.section-title.text-center.mb-5 About Me
           div.about-content.row.gap-4
             div.col-xl-5.mb-xl-0.mb-4
-              div.about-image 
+              div.about-image(data-aos="fade-right" data-aos-delay="1400") 
                 img(src="images/me2.png" alt="about image" class="img-fluid")
             div.col-xl-6
-              div.about-boxes.row.gap-3.mb-4
+              div.about-boxes.row.gap-3.mb-4(data-aos="fade-left" data-aos-delay="2100") 
                 - var aboutBoxes = [{icon: "fa-regular fa-lightbulb", title: "Experience", desc: "1 Year"}, {icon: "fa-brands fa-github", title: "Completed", desc: "70 Repos On Github"}, {icon: "fa-solid fa-suitcase", title: "Templates", desc: "32 Templates"}]
                 each ele in aboutBoxes
                   div.col.box.text-center
                     i(class=ele.icon)
                     h4(class="about-box-title my-2")= ele.title
                     p(class="about-box-desc")= ele.desc
-              div.about-desc.lh-lg.mb-3.
+              div.about-desc.lh-lg.mb-3(data-aos="fade-left" data-aos-delay="2800") 
                 I Am Frontent Developer With 1 Year Of Experience , Self-Realization, And Continuous Learning To Develop Myself In Line With Work Requirements And What The Company Aims To Achieve.
-              a(href="#contact" class="about-contact btn hvr-rectangle-in") Contact Me
+              a(href="#contact" class="about-contact btn hvr-rectangle-in" data-aos="fade-up" data-aos-delay="2800") Contact Me
       section.skills#skills.sec-padding
         .container
           span.section-subtitle.d-block.text-center My Abilities
           h2.section-title.text-center.mb-5 My Skills
           .skills-content.row
-            .col-xl-6.mb-4
+            .col-xl-6.mb-4(data-aos="fade-right" data-aos-delay="3500")
               .box
                 h4(class="skills-title mb-4 text-center") Frontend Developer Skills
                 - var skillsItems = [{icon: "./images/skills icons/html5.png", title: "HTML"}, {icon: "./images/skills icons/css3.png", title: "CSS"}, {icon: "./images/skills icons/js.png", title: "JavaScript"}, {icon: "./images/skills icons/obj.png", title: "JS OOP"}, {icon: "./images/skills icons/apigee-icon.png", title: "Dealing With APIs"}, {icon:"./images/skills icons/jquery-icon.png", title: "JQuery"}, {icon: "./images/skills icons/bootstrap-icon.png", title: "Bootstrap"}, {icon: "./images/skills icons/es6.png", title: "ES6"}, {icon: "./images/skills icons/sass-icon.png", title: "SASS"}, {icon: "images/skills icons/pug-icon.png", title: "Pug JS"}]
@@ -101,7 +101,7 @@ html(lang="en")
                   div.mb-4.col-sm-6.col-md-4
                     i.hvr-pop(class="fa-brands fa-react")
                     h5(class="skill-item-title") Redux Toolkit
-            .col-xl-6.mb-xl-0.mb-4
+            .col-xl-6.mb-xl-0.mb-4(data-aos="fade-left" data-aos-delay="4200")
               .box
                 h4(class="skills-title mb-4 text-center") Other Skills
                 - var skillsItems = [{icon: "./images/skills icons/github.png", title: "Github"}, {icon: "./images/skills icons/aws-cli.png", title: "Command Lines"}, {icon: "./images/skills icons/microsoft-word.png", title: "Word"}, {icon: "./images/skills icons/microsoft-powerpoint.png", title: "Powerpoint"}]
@@ -118,7 +118,7 @@ html(lang="en")
             span.section-subtitle.d-block.text-center Info About Me
             h2.section-title.text-center.mb-5 Personal Info
             div.personal-content.row
-              div.col-xl-6.mb-xl-0.mb-4
+              div.col-xl-6.mb-xl-0.mb-4(data-aos="flip-left" data-aos-delay="4900")
                 .box
                   h4(class="personal-title mb-4 text-center") My Info
                   ul.lh-lg.info
@@ -129,7 +129,7 @@ html(lang="en")
                     li #[span Education:] #[p Bachelor’s degree in Computers and Information Department of Information Systems , Zagazig University]
                     li #[span Degree:] #[p Very Good]
                     li #[span Languages:] #[p Arabic (Native) - English (Good)]
-              div.col-xl-6.mb-xl-0.mb-4
+              div.col-xl-6.mb-xl-0.mb-4(data-aos="flip-right" data-aos-delay="5600")
                 .box
                   h4(class="personal-title mb-4 text-center") Personal Skills
                   ul.personal-skills
@@ -146,7 +146,7 @@ html(lang="en")
             span.section-subtitle.d-block.text-center My Services
             h2.section-title.text-center.mb-5 What I Can Offer
             div.services-content.row.align-items-center
-              div.col-xl-7.mb-xl-0.mb-4
+              div.col-xl-7.mb-xl-0.mb-4(data-aos="flip-up" data-aos-delay="6300")
                 div.experience-items
                   h4(class="services-title mb-4 text-center") My Experience
                   ul.lh-lg
@@ -156,14 +156,14 @@ html(lang="en")
                     li Using preprocessors such as Sass in CSS and engine template such as pug js in HTML for saving time and using programming concepts to save effort and To get an organized code in HTML and CSS
                     li Build Single Page Application(SPA) By React Library and React Hooks and Navigation between pages on the website by using React Router
                     li Using Redux and Redux Toolkit for Making One Store For Using in global website
-              div.col-xl-5
+              div.col-xl-5(data-aos="flip-down" data-aos-delay="7000")
                 div.box
                   img(src="images/service.png" alt="service-image" class="img-fluid")
         section.work.sec-padding#work
           .container
             span.section-subtitle.d-block.text-center My Portfolio
             h2.section-title.text-center.mb-5 Recent Works
-            div.work-filters.mb-5
+            div.work-filters.mb-5(data-aos="zoom-in-up" data-aos-delay="7400")
               - var filterBtns = [{content: "All", filter: "all"}, {content: "Apps", filter: ".app"}, {content: "Templates", filter: ".template"}, {content: "React", filter: ".react"}, {content: "Tutorials", filter: ".tutorial"}, {content: "Games", filter: ".game"}]
               each ele in filterBtns 
                 span.work-item.hvr-wobble-horizontal(data-filter=ele.filter)= ele.content
@@ -174,7 +174,7 @@ html(lang="en")
               - var workCardsTemplates = [{clas: "template", image: "./images/works/templates/template-2.png", title: "New-Template-1", code: "https://github.com/MohammedYasser2021/New-Template-33", live: "https://mohammedyasser2021.github.io/New-Template-33/"}, {clas:"template", image: "./images/works/templates/template-3.jpg", title: "New-Template-2", code: "https://github.com/MohammedYasser2021/32th-template", live: "https://mohammedyasser2021.github.io/32th-template/"}, {clas: "template", image: "./images/works/templates/template-4.jpg", title: "New-Template-3", code: "https://github.com/MohammedYasser2021/31th-template", live: "https://mohammedyasser2021.github.io/31th-template/"}, {clas: "template", image: "./images/works/templates/template-6.jpg", title: "New-Template-4", code: "https://github.com/MohammedYasser2021/30th-template", live: "https://mohammedyasser2021.github.io/30th-template/"}, {clas: "template", image: "./images/works/templates/template-7.jpg", title: "New-Template-5", code: "https://github.com/MohammedYasser2021/29th-template", live: "https://mohammedyasser2021.github.io/29th-template/"}, {clas: "template", image: "./images/works/templates/template-8.jpg", title: "New-Template-6", code: "https://github.com/MohammedYasser2021/28th-template", live: "https://mohammedyasser2021.github.io/28th-template/"}, {clas: "template", image: "./images/works/templates/template-9.jpg", title: "New-Template-7", code: "https://github.com/MohammedYasser2021/27th-template", live: "https://mohammedyasser2021.github.io/27th-template/"}, {clas: "template", image: "./images/works/templates/template-10.jpg", title: "New-Template-8", code: "https://github.com/MohammedYasser2021/26th-template", live: "https://mohammedyasser2021.github.io/26th-template/"}, {clas: "template", image: "./images/works/templates/template-11.jpg", title: "New-Template-9", code: "https://github.com/MohammedYasser2021/25th-template", live: "https://mohammedyasser2021.github.io/25th-template/"}, {clas: "template", image: "./images/works/templates/template-12.jpg", title: "New-Template-10", code: "https://github.com/MohammedYasser2021/24th-template", live: "https://mohammedyasser2021.github.io/24th-template/"}, {clas: "template", image: "./images/works/templates/template-14.jpg", title: "New-Template-11", code: "https://github.com/MohammedYasser2021/22th---template", live: "https://mohammedyasser2021.github.io/22th---template/"}, {clas: "template", image: "./images/works/templates/template-15.jpg", title: "New-Template-12", code: "https://github.com/MohammedYasser2021/21th---template", live: "https://mohammedyasser2021.github.io/21th---template/"}, {clas: "template", image: "./images/works/templates/template-16.jpg", title: "New-Template-13", code: "https://github.com/MohammedYasser2021/20th---template", live: "https://mohammedyasser2021.github.io/20th---template/"}, {clas: "template", image: "./images/works/templates/template-17.jpg", title: "New-Template-14", code: "https://github.com/MohammedYasser2021/19-template", live: "https://mohammedyasser2021.github.io/19-template/bibox.html"}, {clas: "template", image: "./images/works/templates/template-19.png", title: "New-Template-15", code: "https://github.com/MohammedYasser2021/17th-template", live: "https://mohammedyasser2021.github.io/17th-template/"}, {clas: "template", image: "./images/works/templates/template-20.png", title: "New-Template-16", code: "https://github.com/MohammedYasser2021/16th-template", live: "https://mohammedyasser2021.github.io/16th-template/"}, {clas: "template", image: "./images/works/templates/template-21.png", title: "New-Template-17", code: "https://github.com/MohammedYasser2021/15th-template", live: "https://mohammedyasser2021.github.io/15th-template/"}, {clas: "template", image: "./images/works/templates/template-22.png", title: "New-Template-18", code: "https://github.com/MohammedYasser2021/14th-template", live: "https://mohammedyasser2021.github.io/14th-template/"}, {clas: "template", image: "./images/works/templates/template-23.jpg", title: "New-Template-19", code: "https://github.com/MohammedYasser2021/12th-template", live: "https://mohammedyasser2021.github.io/12th-template/"}, {clas: "template", image: "./images/works/templates/template-24.jpg", title: "New-Template-20", code: "https://github.com/MohammedYasser2021/11th-template", live: "https://mohammedyasser2021.github.io/11th-template/"}, {clas: "template", image: "./images/works/templates/template-25.jpg", title: "New-Template-21", code: "https://github.com/MohammedYasser2021/10th-template", live: "https://mohammedyasser2021.github.io/10th-template/"}, {clas: "template", image: "./images/works/templates/template-26.jpg", title: "New-Template-22", code: "https://github.com/MohammedYasser2021/9th-template", live: "https://mohammedyasser2021.github.io/9th-template/"}, {clas: "template", image: "./images/works/templates/template-27.jpg", title: "New-Template-23", code: "https://github.com/MohammedYasser2021/eight-template", live: "https://mohammedyasser2021.github.io/eight-template/"}, {clas: "template", image: "./images/works/templates/template-28.jpg", title: "New-Template-24", code: "https://github.com/MohammedYasser2021/seven-template", live: "https://mohammedyasser2021.github.io/seven-template/"}, {clas: "template", image: "./images/works/templates/template-29.jpg", title: "New-Template-25", code: "https://github.com/MohammedYasser2021/six-template", live: "https://mohammedyasser2021.github.io/six-template/"}, {clas: "template", image: "./images/works/templates/template-30.png", title: "New-Template-26", code: "https://github.com/MohammedYasser2021/fourth_template", live: "https://mohammedyasser2021.github.io/fourth_template/"}, {clas: "template", image: "./images/works/templates/template-31.png", title: "New-Template-27", code: "https://github.com/MohammedYasser2021/template-three", live: "https://mohammedyasser2021.github.io/template-three/"}, {clas: "template", image: "./images/works/templates/template-32.jpg", title: "New-Template-28", code: "https://github.com/MohammedYasser2021/template-one", live: "https://mohammedyasser2021.github.io/template-one/index1.html"}]
               - var workCardsTutorials = [{clas: "tutorial", image: "./images/works/tutorials/tutorial-1.jpg", title: "Image-Slider-Accordion", code: "https://github.com/MohammedYasser2021/Image-Slider-Accordion", live: "https://mohammedyasser2021.github.io/Image-Slider-Accordion/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-2.png", title: "Animated-Login-Form", code: "https://github.com/MohammedYasser2021/Animated-Login-Form", live: "https://mohammedyasser2021.github.io/Animated-Login-Form/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-3.jpg", title: "JQuery-Tutorials-template", code: "https://github.com/MohammedYasser2021/JQuery-Tutorials", live: "https://mohammedyasser2021.github.io/JQuery-Tutorials/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-4.png", title: "Video-Project", code: "https://github.com/MohammedYasser2021/Video-Project", live: "https://mohammedyasser2021.github.io/Video-Project/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-5.jpg", title: "Slide-Show", code: "https://github.com/MohammedYasser2021/Slide-Show", live: "https://github.com/MohammedYasser2021/Slide-Show"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-6.png", title: "Scroll-Project", code: "https://github.com/MohammedYasser2021/Scroll-Project", live: "https://mohammedyasser2021.github.io/Scroll-Project/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-7.jpg", title: "Nice-Sidebar", code: "https://github.com/MohammedYasser2021/Nice-Sidebar", live: "https://mohammedyasser2021.github.io/Nice-Sidebar/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-8.jpg", title: "Random-Quotes", code: "https://github.com/MohammedYasser2021/Random-Quotes", live: "https://mohammedyasser2021.github.io/Random-Quotes/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-9.jpg", title: "Menu-Filter", code: "https://github.com/MohammedYasser2021/Menu-Filter", live: "https://mohammedyasser2021.github.io/Menu-Filter/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-10.png", title: "Nice-Modal", code: "https://github.com/MohammedYasser2021/Nice-Modal", live: "https://mohammedyasser2021.github.io/Nice-Modal/"}, {clas: "tutorial", image: "./images/works/tutorials/tutorial-11.jpg", title: "Nice-Slider", code: "https://github.com/MohammedYasser2021/Nice-Slider", live: "https://mohammedyasser2021.github.io/Nice-Slider/"}, {clas: "tutorial", image: "./images/works/tutorials/tutotial-12.jpg", title: "Questions-Accordion", code: "https://github.com/MohammedYasser2021/Questions-Accordion", live: "https://mohammedyasser2021.github.io/Questions-Accordion/"}]
               each ele in workCardsApp
-                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas data-aos="zoom-in" data-aos-delay="7700")
                   div.work-card
                     img(src=ele.image class="img-fluid" alt="img-app")
                     h5(class="work-title")= ele.title
@@ -182,7 +182,7 @@ html(lang="en")
                       a(href=ele.code class="code") Code
                       a(href=ele.live class="live") Preview
               each ele in workCardsReact
-                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas data-aos="zoom-in" data-aos-delay="7700")
                   div.work-card
                     img(src=ele.image class="img-fluid" alt="img-app")
                     h5(class="work-title")= ele.title
@@ -190,7 +190,7 @@ html(lang="en")
                       a(href=ele.code class="code") Code
                       a(href=ele.live class="live") Preview
               each ele in workCardsGame
-                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas data-aos="zoom-in" data-aos-delay="7700")
                   div.work-card
                     img(src=ele.image class="img-fluid" alt="img-app")
                     h5(class="work-title")= ele.title
@@ -198,7 +198,7 @@ html(lang="en")
                       a(href=ele.code class="code") Code
                       a(href=ele.live class="live")  Preview
               each ele in workCardsTemplates
-                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas data-aos="zoom-in" data-aos-delay="7700")
                   div.work-card
                     img(src=ele.image class="img-fluid" alt="img-app")
                     h5(class="work-title")= ele.title
@@ -206,7 +206,7 @@ html(lang="en")
                       a(href=ele.code class="code") Code
                       a(href=ele.live class="live") Preview
               each ele in workCardsTutorials
-                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas)
+                div.col-xl-3.col-lg-4.col-sm-6.mb-4.mix(class=ele.clas data-aos="zoom-in" data-aos-delay="7700")
                   div.work-card
                     img(src=ele.image class="img-fluid" alt="img-app")
                     h5(class="work-title")= ele.title
@@ -218,7 +218,7 @@ html(lang="en")
             span.section-subtitle.d-block.text-center Get In Touch
             h2.section-title.text-center.mb-5 Contact Me
             div.contact-content.row
-              div.col-xl-6.mb-xl-0.mb-4
+              div.col-xl-6.mb-xl-0.mb-4(data-aos="fade-right" data-aos-delay="8300")
                 div.box
                   h3.contact-title.mb-5 Talk With Me
                   div.contact-info.row
@@ -237,7 +237,7 @@ html(lang="en")
                       h5 Messenger
                       p Mohammed Yasser
                       a(href="https://m.me/mohammedyasser2022" target="_blank" class="hvr-pulse-grow") #[span Send Me] #[i(class="fa-solid fa-message")]
-              div.col-xl-6
+              div.col-xl-6(data-aos="fade-left" data-aos-delay="8300")
                 div.box
                   h3.contact-title.mb-5 Write Your Message To Me
                   form
