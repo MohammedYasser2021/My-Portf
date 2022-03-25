@@ -40,7 +40,7 @@ html(lang="en")
                 a(href="#about" class="btn btn-primary hvr-wobble-horizontal") About Me
             div.home-image.text-center.mt-4(data-aos="fade-left" data-aos-delay="700")
               img(src="./images/home.png" class="img-fluid" all="home image") 
-            div.home-social
+            div.home-social(data-aos="fade-up" )
               a(href="https://www.facebook.com/profile.php?id=100008219671219" class="home-social-link hvr-pop")
                 i(class="fa-brands fa-facebook-square")
               a(href="https://github.com/MohammedYasser2021" class="home-social-link hvr-pop")
@@ -56,18 +56,18 @@ html(lang="en")
           h2.section-title.text-center.mb-5 About Me
           div.about-content.row.gap-4
             div.col-xl-5.mb-xl-0.mb-4
-              div.about-image(data-aos="fade-right" data-aos-delay="1400") 
+              div.about-image(data-aos="fade-right" data-aos-delay="900") 
                 img(src="images/me2.png" alt="about image" class="img-fluid")
             div.col-xl-6
-              div.about-boxes.row.gap-3.mb-4(data-aos="fade-left" data-aos-delay="2100") 
+              div.about-boxes.row.gap-3.mb-4(data-aos="fade-left" data-aos-delay="900") 
                 - var aboutBoxes = [{icon: "fa-regular fa-lightbulb", title: "Experience", desc: "1 Year"}, {icon: "fa-brands fa-github", title: "Completed", desc: "70 Repos On Github"}, {icon: "fa-solid fa-suitcase", title: "Templates", desc: "32 Templates"}]
                 each ele in aboutBoxes
                   div.col.box.text-center
                     i(class=ele.icon)
                     h4(class="about-box-title my-2")= ele.title
                     p(class="about-box-desc")= ele.desc
-              p.about-desc.lh-lg.mb-3(data-aos="fade-left" data-aos-delay="2500") I Am Frontent Developer With 1 Year Of Experience , Self-Realization, And Continuous Learning To Develop Myself In Line With Work Requirements And What The Company Aims To Achieve.
-              a(href="#contact" class="about-contact btn hvr-rectangle-in" data-aos="fade-up" data-aos-delay="2500") Contact Me
+              p.about-desc.lh-lg.mb-3(data-aos="fade-left" data-aos-delay="900") I Am Frontent Developer With 1 Year Of Experience , Self-Realization, And Continuous Learning To Develop Myself In Line With Work Requirements And What The Company Aims To Achieve.
+              a(href="#contact" class="about-contact btn hvr-rectangle-in" data-aos="fade-up" data-aos-delay="900") Contact Me
       section.skills#skills.sec-padding
         .container
           span.section-subtitle.d-block.text-center My Abilities
